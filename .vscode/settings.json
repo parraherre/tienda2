@@ -1,0 +1,14 @@
+{
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.CustomBrowser": null,
+    "css.format.braceStyle": "collapse",
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.colorTheme": "Material Theme",
+    "workbench.editor.decorations.colors": true,
+    "workbench.preferredDarkColorTheme": "Material Theme",
+    "workbench.preferredHighContrastColorTheme": "Material Theme",
+    "workbench.preferredHighContrastLightColorTheme": "Material Theme",
+    "workbench.preferredLightColorTheme": "Material Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "left"
+}

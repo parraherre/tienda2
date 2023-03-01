@@ -1,6 +1,10 @@
-//Definiendo datos
- let nombre="James Rodriguez"
-if(5>2){
-     let nombre="Lucho Diaz"
-}
-console.log("hola "+nombre)
+import{ productos } from '../helpers/baseDatos.js'
+import { pintarProductos } from '../helpers/pintarProductos.js'
+
+
+//llamando a la fila
+
+let fila=document.getElementById("fila")
+
+//Pintar los productos de la tienda
+pintarProductos(productos)
