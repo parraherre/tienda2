@@ -7,4 +7,25 @@ import { pintarProductos } from '../helpers/pintarProductos.js'
 let fila=document.getElementById("fila")
 
 //Pintar los productos de la tienda
+
 pintarProductos(productos)
+
+//Escuchando el click en la fila contenedora de productos
+
+fila.addEventListener("click",function(evento){
+
+    let datosProductoSeleccionado={}
+    let tarjeta=evento.target.parentElement
+
+    datosProductoSeleccionado.foto=tarjeta.querySelector("img").src
+    datosProductoSeleccionado.nombre=tarjeta.querySelector("h3").textContent
+    datosProductoSeleccionado.precio=tarjeta.querySelector("h5").textContent
+    datosProductoSeleccionado.descripcion=tarjeta.querySelector("p").textContent
+
+    //Usaremos la memoria delmpc para guardar esta info
+
+    localStorage.setItem("producto",JSON.stringify(datosProductoSeleccionado))
+    
+    window.location.href= "./src/views/ampliarinfo.html"
+    
+})

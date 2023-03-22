@@ -1,3 +1,7 @@
+export const formateador = new Intl.NumberFormat('en-US', {
+    
+})
+
 export function pintarProductos(productos){
     
     productos.forEach(function(producto){
@@ -26,15 +30,25 @@ export function pintarProductos(productos){
 
         //crear la descripcion
 
-        let descripcion=document.createElement("h6")
-        descripcion.classList.add("content-right")
+        let descripcion=document.createElement("p")
+        descripcion.classList.add("content-right","d-none")
         descripcion.textContent=producto.descripcion
    
         //crear un precio
    
-        let precio=document.createElement("h5")
-        precio.classList.add("text-center","text-success","fw-bold")
-        precio.textContent="COP"+producto.precio
+        //let precio=document.createElement("h5")
+        //precio.classList.add("text-center","text-success","fw-bold")
+        //precio.textContent="COP"+producto.precio
+
+        // crear un precio
+        let precioDisplay = document.createElement("h5")
+        precioDisplay.classList.add("text-center", "text-rojo", "fw-bold", "mb-3")
+        precioDisplay.textContent = (producto.precio)
+        
+    
+        let precioOculto = document.createElement("h1")
+        precioOculto.classList.add("d-none")
+        precioOculto.textContent = producto.precio
 
         //Detectando evento
 
@@ -55,7 +69,9 @@ export function pintarProductos(productos){
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(imagen)
         tarjeta.appendChild(descripcion)
-        tarjeta.appendChild(precio)
+        tarjeta.appendChild(precioDisplay)
+        tarjeta.appendChild(precioOculto)
+        //tarjeta.appendChild(precio)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
    
